@@ -2,57 +2,12 @@ import { CarCardProps } from "@/components/molecules/Car";
 
 export const cars: CarCardProps[] = [
   {
-    name: "Audi Q8 2023",
-    image: "/cars/q8.jpeg",
-
-    isNewArrival: true,
-    isBestSeller: true,
-    isGoodDeal: true,
-
-    year: 2023,
-    capacity: 5,
-    fuel: "Diesel",
-    transmission: "Auto.",
-
-    avis: 1,
-  },
-  {
-    name: "SEAT Arona 2023",
-    image: "/cars/arona.jpg",
-
-    isNewArrival: true,
-    isBestSeller: true,
-    isGoodDeal: false,
-
-    year: 2023,
-    capacity: 5,
-    fuel: "Diesel",
-    transmission: "Auto.",
-
-    avis: 8,
-  },
-  {
-    name: "VOLKSWAGEN Touareg 2023",
-    image: "/cars/touareg.jpeg",
+    name: "VOLKSWAGEN T-Roc 2023",
+    image: "/cars/t-roc.jpg",
 
     isNewArrival: true,
     isBestSeller: false,
     isGoodDeal: true,
-
-    year: 2023,
-    capacity: 5,
-    fuel: "Diesel",
-    transmission: "Auto.",
-
-    avis: 2,
-  },
-  {
-    name: "DACIA Duster 2023",
-    image: "/cars/duster.webp",
-
-    isNewArrival: true,
-    isBestSeller: false,
-    isGoodDeal: false,
 
     year: 2023,
     capacity: 5,
@@ -62,8 +17,68 @@ export const cars: CarCardProps[] = [
     avis: 4,
   },
   {
-    name: "RENAULT Clio 4 2022",
-    image: "/cars/clio.png",
+    name: "HYUNDAI Tucson 2023",
+    image: "/cars/tucson.jpg",
+
+    isNewArrival: true,
+    isBestSeller: false,
+    isGoodDeal: true,
+
+    year: 2023,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Auto.",
+
+    avis: 12,
+  },
+  {
+    name: "HYUNDAI Creta 2023",
+    image: "/cars/creta.jpeg",
+
+    isNewArrival: true,
+    isBestSeller: false,
+    isGoodDeal: false,
+
+    year: 2023,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Auto.",
+
+    avis: 6,
+  },
+  {
+    name: "SEAT Ateca 2023",
+    image: "/cars/ateca.jpeg",
+
+    isNewArrival: true,
+    isBestSeller: true,
+    isGoodDeal: false,
+
+    year: 2023,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Auto.",
+
+    avis: 3,
+  },
+  {
+    name: "DACIA Logan Model 2023",
+    image: "/cars/logan.jpeg",
+
+    isNewArrival: true,
+    isBestSeller: true,
+    isGoodDeal: true,
+
+    year: 2023,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Manuelle",
+
+    avis: 4,
+  },
+  {
+    name: "DACIA Sandero 2022",
+    image: "/cars/sandero.jpeg",
 
     isNewArrival: false,
     isBestSeller: true,
@@ -74,21 +89,66 @@ export const cars: CarCardProps[] = [
     fuel: "Diesel",
     transmission: "Manuelle",
 
-    avis: 12,
+    avis: 8,
   },
   {
-    name: "VOLKSWAGEN Golf 5 2017",
-    image: "/cars/golf.jpeg",
+    name: "DACIA Streetway",
+    image: "/cars/streetway.jpeg",
+
+    isNewArrival: false,
+    isBestSeller: false,
+    isGoodDeal: true,
+
+    year: 2022,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Manuelle",
+
+    avis: 8,
+  },
+  {
+    name: "DACIA Duster 4x4",
+    image: "/cars/duster.webp",
 
     isNewArrival: false,
     isBestSeller: true,
     isGoodDeal: true,
 
-    year: 2017,
+    year: 2022,
     capacity: 5,
-    fuel: "Essence",
+    fuel: "Diesel",
     transmission: "Manuelle",
 
-    avis: 19,
+    avis: 12,
+  },
+  {
+    name: "PEUGEOT 208 2023",
+    image: "/cars/208.jpg",
+
+    isNewArrival: false,
+    isBestSeller: false,
+    isGoodDeal: true,
+
+    year: 2023,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Manuelle",
+
+    avis: 9,
+  },
+  {
+    name: "RENAULT Clio 5 2023",
+    image: "/cars/clio-5.jpeg",
+
+    isNewArrival: false,
+    isBestSeller: true,
+    isGoodDeal: true,
+
+    year: 2023,
+    capacity: 5,
+    fuel: "Diesel",
+    transmission: "Manuelle",
+
+    avis: 21,
   },
 ];

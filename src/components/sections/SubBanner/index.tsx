@@ -15,7 +15,7 @@ function SubBanner() {
       <div className="relative wrapper h-full flex flex-col justify-center gap-4 z-[2] section">
         <h1
           className={classNames(
-            "font-medium text-gray-50 text-md md:text-xl lg:text-4xl md:max-w-[500px] lg:max-w-[600px] !leading-tight",
+            "font-medium text-gray-50 text-2xl md:text-3xl lg:text-4xl md:max-w-[500px] lg:max-w-[600px] !leading-tight",
             epilogue.className
           )}
         >

@@ -55,6 +55,7 @@ function Car({
           alt={name}
           className="object-cover rounded-xl min-h-[250px] max-h-[250px] h-[250px] w-full min-w-full max-w-full drop-shadow-xl"
           src={image}
+          loading="lazy"
         />
       </CardHeader>
       <CardBody className="overflow-visible pt-1 pb-2">

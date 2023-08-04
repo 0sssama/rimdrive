@@ -11,27 +11,29 @@ function Contact() {
   return (
     <div className="wrapper section flex items-center justify-start sm:justify-around gap-10 gap-y-12 flex-wrap">
       <div className="flex items-center gap-2">
-        <MdLocationPin size={46} className="text-slate-800" />
-        <p className="text-sm md:text-lg font-medium">Tanger, Maroc</p>
+        <MdLocationPin size={36} className="text-slate-800" />
+        <p className="text-sm md:text-md lg:text-lg font-medium">
+          Tanger, Maroc
+        </p>
       </div>
       <div className="flex items-center gap-2">
-        <BiSupport size={46} className="text-slate-800" />
+        <BiSupport size={36} className="text-slate-800" />
         <div className="flex flex-col">
-          <p className="text-sm md:text-lg font-medium">
+          <p className="text-sm md:text-md lg:text-lg font-medium">
             Tel:{" "}
             <Link
               href={`tel:${whatsappNumber}`}
-              className="text-sm md:text-lg text-slate-800 underline"
+              className="text-sm md:text-md lg:text-lg text-slate-800 underline"
             >
               {phoneNumber}
             </Link>
             ;
           </p>
-          <p className="text-sm md:text-lg font-medium">
+          <p className="text-sm md:text-md lg:text-lg font-medium">
             Email:{" "}
             <Link
               href={`mailto:${email}`}
-              className="text-sm md:text-lg text-slate-800 underline"
+              className="text-sm md:text-md lg:text-lg text-slate-800 underline"
             >
               {email}
             </Link>
@@ -39,8 +41,10 @@ function Contact() {
         </div>
       </div>
       <div className="flex items-center gap-2">
-        <LuClock2 size={46} className="text-slate-800" />
-        <p className="text-sm md:text-lg font-medium">Lun-Sam, 09h-23h</p>
+        <LuClock2 size={36} className="text-slate-800" />
+        <p className="text-sm md:text-md lg:text-lg font-medium">
+          24h/24, 7j/7
+        </p>
       </div>
     </div>
   );
