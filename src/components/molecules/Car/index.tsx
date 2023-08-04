@@ -99,7 +99,7 @@ function Car({
         {avis > 0 && (
           <div className="w-full flex items-center gap-1 mt-2">
             {[...Array(5)].map((_, i) => (
-              <AiFillStar size={18} className="text-yellow-500" />
+              <AiFillStar size={18} className="text-yellow-500" key={i} />
             ))}
             <p className="text-xs">{`(${avis} avis)`}</p>
           </div>

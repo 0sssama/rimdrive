@@ -11,7 +11,7 @@ function ChooseUs() {
       <div className="relative wrapper">
         <div className="w-full flex flex-col items-center gap-3">
           <h1 className="text-gray-50 font-bold text-3xl md:text-5xl lg:text-5xl max-w-[600px] text-center">
-            Choisissez l'Excellence
+            Choisissez l&apos;Excellence
           </h1>
           <p className="text-gray-400 text-xs md:text-sm lg:text-md max-w-[300px] md:max-w-[500px] text-center">
             {
@@ -21,7 +21,10 @@ function ChooseUs() {
         </div>
         <div className="w-full flex items-start justify-center mt-12 md:mt-20 flex-wrap gap-x-4 gap-y-8">
           {items.map((item, i) => (
-            <div className="min-w-[280px] max-w-[300px] flex flex-col items-center gap-2 text-gray-50 text-center">
+            <div
+              className="min-w-[280px] max-w-[300px] flex flex-col items-center gap-2 text-gray-50 text-center"
+              key={i}
+            >
               <div className="w-[60px] h-[60px] rounded-full bg-gray-50 flex items-center justify-center">
                 {item.icon}
               </div>

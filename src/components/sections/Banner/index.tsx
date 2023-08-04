@@ -11,7 +11,7 @@ function Banner() {
     <div className="relative w-full h-[500px] lg:h-[700px] bg-gray-900 overflow-hidden">
       <div className="absolute w-full h-full flex flex-col items-center justify-center top-0 left-0 z-[2] p-10">
         <h1 className="font-medium text-gray-50 text-2xl md:text-3xl lg:text-5xl text-center md:max-w-[600px] lg:max-w-[800px] !leading-tight">
-          Explorez la beauté du Maroc avec l'élégance des quatre roues!
+          Explorez la beauté du Maroc avec l&apos;élégance des quatre roues!
         </h1>
         <p className="text-gray-400 text-sm lg:text-md text-center md:text-sm  md:max-w-[400px] lg:max-w-[500px] mt-2 mb-6">
           {
