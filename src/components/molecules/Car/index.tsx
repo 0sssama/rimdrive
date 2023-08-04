@@ -108,7 +108,7 @@ function Car({
           <Feature type="year">{year}</Feature>
           <Feature type="transmission">{transmission}</Feature>
           <Feature type="fuel">{fuel}</Feature>
-          <Feature type="capacity">{capacity}</Feature>
+          <Feature type="capacity">{capacity} Pers.</Feature>
         </div>
       </CardBody>
       <CardFooter className="w-full">
