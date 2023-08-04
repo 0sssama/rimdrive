@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  @apply w-full max-w-[1280px] m-auto;
+}
+
+.section {
+  @apply py-20;
+}
+
+@media screen and (max-width: 512px) {
+  .button-container button,
+  .button-container a {
+    width: 100% !important;
+  }
+}
+
+.button-container button,
+.button-container a {
+  @apply px-8 py-5;
+}
