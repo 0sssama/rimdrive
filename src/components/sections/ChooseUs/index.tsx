@@ -7,7 +7,7 @@ import { whatsappNumber } from "@/utils/globals";
 
 function ChooseUs() {
   return (
-    <div className="w-full section px-10 bg-gray-900" id="choose-us">
+    <div className="w-full section bg-gray-900" id="choose-us">
       <div className="relative wrapper">
         <div className="w-full flex flex-col items-center gap-3">
           <h1 className="text-gray-50 font-bold text-3xl md:text-5xl lg:text-5xl max-w-[600px] text-center">
@@ -44,7 +44,7 @@ function ChooseUs() {
             radius="full"
             className="font-medium"
             startContent={<MdWhatsapp size={20} />}
-            href={` https://wa.me/${whatsappNumber}?text=Bonjour! Je suis intéressé par la location d'une voiture avec RimDrive et j'aimerais avoir plus d'informations. `}
+            href={`https://wa.me/${whatsappNumber}?text=Bonjour! Je suis intéressé par la location d'une voiture avec RimDrive et j'aimerais avoir plus d'informations. `}
             target="_blank"
             rel="noopener noreferrer"
             as={"a"}

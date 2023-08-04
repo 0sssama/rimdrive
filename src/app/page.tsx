@@ -3,6 +3,7 @@ import {
   Banner,
   ChooseUs,
   Collection,
+  Contact,
   Footer,
   Header,
   SubBanner,
@@ -17,6 +18,7 @@ export default function Home() {
       <Collection />
       <ChooseUs />
       <SubBanner />
+      <Contact />
       <Footer />
     </main>
   );

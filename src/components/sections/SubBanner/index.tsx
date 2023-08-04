@@ -12,7 +12,7 @@ function SubBanner() {
       className="w-full relative h-[250px] flex items-center justify-center"
       id="subbanner"
     >
-      <div className="relative wrapper h-full flex flex-col justify-center gap-4 z-[2]">
+      <div className="relative wrapper h-full flex flex-col justify-center gap-4 z-[2] section">
         <h1
           className={classNames(
             "font-medium text-gray-50 text-md md:text-xl lg:text-4xl md:max-w-[500px] lg:max-w-[600px] !leading-tight",
@@ -27,7 +27,7 @@ function SubBanner() {
             radius="full"
             className="font-medium"
             startContent={<MdWhatsapp size={20} />}
-            href={` https://wa.me/${whatsappNumber}?text=Bonjour! Je suis intéressé par la location d'une voiture avec RimDrive et j'aimerais avoir plus d'informations. `}
+            href={`https://wa.me/${whatsappNumber}?text=Bonjour! Je suis intéressé par la location d'une voiture avec RimDrive et j'aimerais avoir plus d'informations. `}
             target="_blank"
             rel="noopener noreferrer"
             as={"a"}

@@ -4,7 +4,7 @@ import React from "react";
 
 function Collection() {
   return (
-    <div className="relative wrapper section" id="collection">
+    <div className="relative wrapper section !px-0" id="collection">
       <div className="w-full flex flex-col items-center gap-3">
         <h1 className="font-bold text-3xl md:text-5xl lg:text-5xl max-w-[600px] text-center">
           Collection RimDrive

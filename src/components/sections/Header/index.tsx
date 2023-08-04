@@ -13,6 +13,9 @@ function Header() {
       if (window.scrollY > 120) setScrolled(true);
       else setScrolled(false);
     };
+
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
