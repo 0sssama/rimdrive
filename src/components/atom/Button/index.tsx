@@ -5,7 +5,8 @@ import { extendVariants, Button as NextUIButton } from "@nextui-org/react";
 export const Button = extendVariants(NextUIButton, {
   variants: {
     color: {
-      white: "text-gray-900 bg-gray-50 hover:bg-gray-400",
+      white:
+        "text-gray-900 bg-gray-50 border-gray-50 border-2 hover:border-gray-400 hover:bg-gray-400",
       whiteBordered:
         "text-gray-50 bg-transparent border-gray-50 border-2 hover:bg-gray-50 hover:text-gray-900",
       black: "text-gray-50 bg-gray-900 hover:bg-gray-800",
