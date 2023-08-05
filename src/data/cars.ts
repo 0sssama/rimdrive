@@ -3,7 +3,7 @@ import { CarCardProps } from "@/components/molecules/Car";
 export const cars: CarCardProps[] = [
   {
     name: "VOLKSWAGEN T-Roc 2023",
-    image: "/cars/t-roc.jpg",
+    image: "/cars/t-roc.webp",
 
     isNewArrival: true,
     isBestSeller: false,
@@ -18,7 +18,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "HYUNDAI Tucson 2023",
-    image: "/cars/tucson.jpg",
+    image: "/cars/tucson.webp",
 
     isNewArrival: true,
     isBestSeller: false,
@@ -33,7 +33,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "HYUNDAI Creta 2023",
-    image: "/cars/creta.jpeg",
+    image: "/cars/creta.webp",
 
     isNewArrival: true,
     isBestSeller: false,
@@ -48,7 +48,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "SEAT Ateca 2023",
-    image: "/cars/ateca.jpeg",
+    image: "/cars/ateca.webp",
 
     isNewArrival: true,
     isBestSeller: true,
@@ -63,7 +63,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "DACIA Logan Model 2023",
-    image: "/cars/logan.jpeg",
+    image: "/cars/logan.webp",
 
     isNewArrival: true,
     isBestSeller: true,
@@ -78,7 +78,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "DACIA Sandero 2022",
-    image: "/cars/sandero.jpeg",
+    image: "/cars/sandero.webp",
 
     isNewArrival: false,
     isBestSeller: true,
@@ -93,7 +93,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "DACIA Streetway",
-    image: "/cars/streetway.jpeg",
+    image: "/cars/streetway.webp",
 
     isNewArrival: false,
     isBestSeller: false,
@@ -123,7 +123,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "PEUGEOT 208 2023",
-    image: "/cars/208.jpg",
+    image: "/cars/208.webp",
 
     isNewArrival: false,
     isBestSeller: false,
@@ -138,7 +138,7 @@ export const cars: CarCardProps[] = [
   },
   {
     name: "RENAULT Clio 5 2023",
-    image: "/cars/clio-5.jpeg",
+    image: "/cars/clio-5.webp",
 
     isNewArrival: false,
     isBestSeller: true,

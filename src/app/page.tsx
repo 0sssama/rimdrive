@@ -6,6 +6,7 @@ import {
   Contact,
   Footer,
   Header,
+  SEO,
   SubBanner,
 } from "@/components/sections";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <SubBanner />
       <Contact />
       <Footer />
+      <SEO />
     </main>
   );
 }
