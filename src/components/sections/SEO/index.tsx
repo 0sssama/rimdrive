@@ -5,7 +5,7 @@ function SEO() {
     <section className="sr-only">
       <h1>RimDrive</h1>
       <article>
-        Découvrez la Liberté sur Quatre Roues avec RimDrive Fes Que vous
+        {`Découvrez la Liberté sur Quatre Roues avec RimDrive Fes Que vous
         cherchiez une location de voiture à Fes, une voiture de luxe pour votre
         escapade marocaine, ou simplement un moyen de transport fiable pour vos
         déplacements, RimDrive Fes est votre solution. Nous comprenons les
@@ -19,7 +19,7 @@ function SEO() {
         location de voitures à Fes, faites confiance à RimDrive Fes pour
         combiner qualité, commodité, et coût. N'attendez plus, trouvez la
         meilleure location de voiture à Fes et profitez de chaque instant sur la
-        route marocaine avec RimDrive Fes.
+        route marocaine avec RimDrive Fes.`}
         <ul>
           <li>Location Voiture Fes</li>
           <li>Location Voiture Fez</li>
