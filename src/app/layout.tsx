@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Providers } from "./providers";
 import { plusJakartaSans } from "@/fonts";
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "RimDrive - Votre Compagnon De Route Marocain",
@@ -30,17 +31,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="light">
-      <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-NMM6WL79HH"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-NMM6WL79HH');`,
-          }}
-        ></script>
-      </Head>
+      <Script
+        async
+        id="google-analytics-first-script"
+        type="text/partytown"
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-NMM6WL79HH"
+      ></Script>
+      <Script
+        id="google-analytics-second-script"
+        type="text/partytown"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	  
+		gtag('config', 'G-NMM6WL79HH');
+		`,
+        }}
+      ></Script>
 
       <body className={plusJakartaSans.className}>
         <Providers>{children}</Providers>
