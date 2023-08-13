@@ -59,17 +59,17 @@ function SocialMediaLink({
 const socialMedia = [
   {
     icon: <IoLogoFacebook size={20} className="text-gray-50" />,
-    href: "https://www.facebook.com/rimdrive",
+    href: "https://www.facebook.com/Rimlocationfes/",
     title: "Facebook",
   },
   {
     icon: <IoLogoInstagram size={20} className="text-gray-50" />,
-    href: "https://www.instagram.com/rimdrive",
+    href: "https://www.instagram.com/rimlocationfes/",
     title: "Instagram",
   },
   {
     icon: <IoLogoTiktok size={20} className="text-gray-50" />,
-    href: "https://www.tiktok.com/@rimdrive",
+    href: "https://www.tiktok.com/@ecppautoecole",
     title: "Tiktok",
   },
 ];
