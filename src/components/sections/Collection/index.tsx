@@ -5,7 +5,7 @@ import React from "react";
 function Collection() {
   return (
     <div className="relative wrapper section !px-0" id="collection">
-      <div className="w-full flex flex-col items-center gap-3">
+      <div className="w-full flex flex-col items-center gap-3 p-4">
         <h1 className="font-bold text-3xl md:text-5xl lg:text-5xl max-w-[700px] text-center">
           Location de Voitures de Luxe
         </h1>
