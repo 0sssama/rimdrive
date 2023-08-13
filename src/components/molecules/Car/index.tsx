@@ -18,6 +18,8 @@ import { FaCarAlt } from "react-icons/fa";
 import { BsPeopleFill, BsFuelPumpFill } from "react-icons/bs";
 import { TbManualGearbox } from "react-icons/tb";
 import { AiFillStar } from "react-icons/ai";
+import { useSetAtom } from "jotai";
+import { dateModalOpenAtom } from "@/atoms";
 
 export interface CarCardProps {
   name: string;
@@ -48,6 +50,8 @@ function Car({
   image,
   avis,
 }: CarCardProps) {
+  const setDateModal = useSetAtom(dateModalOpenAtom);
+
   return (
     <Card className="w-[320px] md:w-[400px] lg:w-[400px]">
       <CardHeader>
@@ -117,10 +121,9 @@ function Car({
           color="black"
           className="font-semibold w-full"
           size="lg"
-          as="a"
-          href={`https://wa.me/${whatsappNumber}?text=Bonjour! Je suis intéressé par la location de '${name}' chez RimDrive. J'aimerais avoir plus d'informations. `}
-          target="_blank"
-          rel="noopener noreferrer"
+          onPress={() => {
+            setDateModal({ open: true, car: { name } });
+          }}
         >
           Louer Maintenant
         </Button>
