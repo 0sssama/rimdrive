@@ -25,7 +25,7 @@ function Header() {
   return (
     <header
       className={classNames(
-        "fixed top-0 left-0 w-full p-3 z-[1337] flex items-center justify-center transition-all duration-600",
+        "fixed top-0 left-0 w-full p-3 z-[50] flex items-center justify-center transition-all duration-600",
         {
           "bg-gray-50/90 backdrop-blur-sm saturate-180 drop-shadow-lg":
             scrolled,

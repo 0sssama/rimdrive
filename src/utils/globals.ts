@@ -1,4 +1,4 @@
-export const whatsappNumber = "21266606060370";
+export const whatsappNumber = "212606060370";
 export const phoneNumbers = [
   {
     display: "+212 6 06 06 03 70",

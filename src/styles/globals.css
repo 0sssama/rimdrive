@@ -28,3 +28,20 @@
 .button-container a {
   @apply px-8 py-5;
 }
+
+.react-datepicker .react-datepicker__day--selected {
+  @apply !bg-gray-800;
+}
+
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  @apply !bg-gray-500;
+}
+
+.date-input {
+  @apply w-full rounded-md border-0 mt-1 py-2 px-4 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-6;
+}
+
+.react-datepicker-wrapper {
+  @apply w-full;
+}
