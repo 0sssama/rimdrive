@@ -41,9 +41,6 @@ function DatePickerModal() {
       if (startDate.getTime() === endDate.getTime())
         return rej("La date de départ doit être différente de la date de fin");
 
-      if (startDate.getTime() < new Date().getTime())
-        return rej("La date de départ doit être après aujourd'hui");
-
       return res("Les dates sont valides!");
     });
 
