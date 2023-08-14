@@ -1,8 +1,10 @@
-export { default as Banner } from "./Banner";
-export { default as Header } from "./Header";
-export { default as Collection } from "./Collection";
-export { default as ChooseUs } from "./ChooseUs";
-export { default as SubBanner } from "./SubBanner";
-export { default as Contact } from "./Contact";
-export { default as Footer } from "./Footer";
+import dynamic from "next/dynamic";
+
+export const Banner = dynamic(() => import("./Banner"));
+export const Header = dynamic(() => import("./Header"));
+export const Collection = dynamic(() => import("./Collection"));
+export const ChooseUs = dynamic(() => import("./ChooseUs"));
+export const SubBanner = dynamic(() => import("./SubBanner"));
+export const Contact = dynamic(() => import("./Contact"));
+export const Footer = dynamic(() => import("./Footer"));
 export { default as SEO } from "./SEO";
