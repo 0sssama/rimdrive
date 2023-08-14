@@ -24,21 +24,57 @@ moment.locale("fr", {
     "Janv._Févr._Mars_Avr._Mai_Juin_Juil._Août_Sept._Oct._Nov._Déc.".split("_"),
 });
 
+export const cities = ["Tanger", "Fes", "Rabat", "Casablanca", "Marrakech"];
+export type City = (typeof cities)[number];
+
+export const readableDate = (date: Date) =>
+  moment(date).locale("fr").format("Do MMM YYYY");
+
+export const whatsappMessage = ({
+  carName,
+  city,
+  startDate,
+  endDate,
+}: {
+  carName: string;
+  city: string;
+  startDate: Date;
+  endDate: Date;
+}) =>
+  `Bonjour! Je suis intéressé par la location de la voiture *${carName}* chez RimDrive du *${readableDate(
+    startDate
+  )}* au *${readableDate(
+    endDate
+  )}* sur *${city}*. J'aimerais avoir plus d'informations.`;
+
 function DatePickerModal() {
   const [dateModal, setDateModal] = useAtom(dateModalOpenAtom);
 
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [formData, setFormData] = useState({
+    startDate: new Date(),
+    endDate: new Date(),
+    city: "Tanger",
+  });
+
   const [error, setError] = useState<string | null>(null);
+
+  const setStartDate = (date: Date) =>
+    setFormData((old) => ({ ...old, startDate: date }));
+
+  const setEndDate = (date: Date) =>
+    setFormData((old) => ({ ...old, endDate: date }));
+
+  const setCity = (city: City) => setFormData((old) => ({ ...old, city }));
 
   const validate = () =>
     new Promise((res, rej) => {
-      if (!startDate || !endDate) return rej("Les dates sont obligatoires");
+      if (!formData.startDate || !formData.endDate)
+        return rej("Les dates sont obligatoires");
 
-      if (startDate.getTime() > endDate.getTime())
+      if (formData.startDate.getTime() > formData.endDate.getTime())
         return rej("La date de départ doit être avant la date de fin");
 
-      if (startDate.getTime() === endDate.getTime())
+      if (formData.startDate.getTime() === formData.endDate.getTime())
         return rej("La date de départ doit être différente de la date de fin");
 
       return res("Les dates sont valides!");
@@ -70,11 +106,11 @@ function DatePickerModal() {
               Date de début
             </label>
             <DatePicker
-              selected={startDate}
+              selected={formData.startDate}
               onChange={(date) => date && setStartDate(date)}
               selectsStart
-              startDate={startDate}
-              endDate={endDate}
+              startDate={formData.startDate}
+              endDate={formData.endDate}
               minDate={new Date()}
               dateFormat="MMM d, yyyy"
               locale={"fr"}
@@ -88,18 +124,32 @@ function DatePickerModal() {
               Date de fin
             </label>
             <DatePicker
-              selected={endDate}
+              selected={formData.endDate}
               onChange={(date) => date && setEndDate(date)}
               selectsEnd
-              startDate={startDate}
-              endDate={endDate}
-              minDate={startDate || new Date()}
+              startDate={formData.startDate}
+              endDate={formData.endDate}
+              minDate={formData.startDate || new Date()}
               dateFormat="MMM d, yyyy"
               locale={"fr"}
               popperClassName="calendar-popper"
               placeholderText="Date de fin"
               className="date-input w-full"
             />
+          </div>
+          <div className="date-input-wrapper w-full mt-1">
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              La ville
+            </label>
+            <select
+              value={formData.city}
+              onChange={(e) => setCity(e.target.value)}
+              className="date-input w-full"
+            >
+              {cities.map((city) => (
+                <option key={city}>{city}</option>
+              ))}
+            </select>
           </div>
         </ModalBody>
         <ModalFooter>
@@ -119,15 +169,10 @@ function DatePickerModal() {
               validate()
                 .then(() => {
                   window.open(
-                    `https://wa.me/${whatsappNumber}?text=Bonjour! Je suis intéressé par la location de '${
-                      dateModal.car?.name
-                    }' chez RimDrive du ${moment(startDate)
-                      .locale("fr")
-                      .format("Do MMM. YYYY")} au ${moment(endDate)
-                      .locale("fr")
-                      .format(
-                        "Do MMM. YYYY"
-                      )}. J'aimerais avoir plus d'informations.`
+                    `https://wa.me/${whatsappNumber}?text=${whatsappMessage({
+                      ...formData,
+                      carName: dateModal.car?.name || "",
+                    })}`
                   );
                 })
                 .catch((err) => {
