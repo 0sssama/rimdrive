@@ -30,27 +30,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="light">
-      <Script
-        async
-        id="google-analytics-first-script"
-        type="text/partytown"
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-NMM6WL79HH"
-      ></Script>
-      <Script
-        id="google-analytics-second-script"
-        type="text/partytown"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-	  
-		gtag('config', 'G-NMM6WL79HH');
-		`,
-        }}
-      ></Script>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-NMM6WL79HH" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-NMM6WL79HH');
+        `}
+      </Script>
       <body className={plusJakartaSans.className}>
         <Providers>{children}</Providers>
       </body>
